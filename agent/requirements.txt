@@ -1,0 +1,16 @@
+# Parcel Pilot — LangGraph agent
+# CopilotKit 0.1.90 pins langgraph>=0.3.25,<1.1.0 so we stay on the 1.0.x line.
+
+copilotkit==0.1.90
+langgraph==1.0.10
+# Pinned: langgraph-prebuilt 1.0.9+ imports ExecutionInfo/ServerInfo from
+# langgraph.runtime, which doesn't exist on the 1.0.x line. 1.0.8 is the last
+# release that works with langgraph 1.0.10.
+langgraph-prebuilt==1.0.8
+langchain-openai>=0.3.0,<2.0.0
+langchain-core>=0.3.66
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.30.0
+python-dotenv>=1.0.0
+httpx>=0.27.0
+pydantic>=2.0.0

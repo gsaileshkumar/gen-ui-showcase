@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dhl-red: #d40511;
+  --dhl-yellow: #ffcc00;
+}
+
+html,
+body {
+  background: #ffffff;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* DHL yellow band — used as the app's hero strip */
+.dhl-band {
+  background: var(--dhl-yellow);
+  border-bottom: 4px solid var(--dhl-red);
+}
+
+/* Tab nav underline accent */
+.tab-active {
+  border-bottom-color: var(--dhl-red);
+  color: var(--dhl-red);
+}

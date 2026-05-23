@@ -1,0 +1,44 @@
+{
+  "currency": "USD",
+  "declaredValue": 250.00,
+  "summary": {
+    "totalDutyAmount": 17.50,
+    "totalTaxAmount": 22.40,
+    "totalLandedCost": 289.90
+  },
+  "breakdown": [
+    {
+      "code": "ITEM",
+      "name": "Declared item value",
+      "amount": 250.00,
+      "currency": "USD"
+    },
+    {
+      "code": "FREIGHT",
+      "name": "Freight charges",
+      "amount": 184.52,
+      "currency": "USD"
+    },
+    {
+      "code": "DUTY",
+      "name": "Import duty (7.0%)",
+      "amount": 17.50,
+      "currency": "USD"
+    },
+    {
+      "code": "VAT",
+      "name": "Sales tax / VAT (8.96%)",
+      "amount": 22.40,
+      "currency": "USD"
+    }
+  ],
+  "hsCode": {
+    "code": "8517.62.00",
+    "description": "Machines for reception/transmission of voice or data"
+  },
+  "incoterm": "DAP",
+  "notes": [
+    "Duty rate inferred from product category. Confirm with destination customs.",
+    "VAT collected at point of import per US state of delivery."
+  ]
+}
