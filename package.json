@@ -1,0 +1,17 @@
+{
+  "name": "parcel-pilot",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Parcel Pilot — a live demo of CopilotKit's Generative UI spectrum, powered by DHL Developer Portal API schemas. Educational; not affiliated with DHL.",
+  "scripts": {
+    "dev": "concurrently -k -n web,agent -c yellow,red \"npm:dev:web\" \"npm:dev:agent\"",
+    "dev:web": "npm --prefix web run dev",
+    "dev:agent": "cd agent && python -m uvicorn main:app --host 0.0.0.0 --port 8123 --reload",
+    "install:all": "npm install && npm --prefix web install && pip install -r agent/requirements.txt",
+    "build": "npm --prefix web run build",
+    "start": "concurrently -k -n web,agent -c yellow,red \"npm --prefix web run start\" \"npm run dev:agent\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

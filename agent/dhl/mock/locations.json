@@ -1,0 +1,93 @@
+{
+  "locations": [
+    {
+      "url": "/location-finder/v1/locations/8003-4901801",
+      "location": {
+        "ids": [
+          { "locationId": "8003-4901801", "provider": "DHL" }
+        ],
+        "keyword": "Packstation 145",
+        "type": "locker",
+        "address": {
+          "countryCode": "DE",
+          "postalCode": "10115",
+          "addressLocality": "Berlin",
+          "streetAddress": "Invalidenstraße 31"
+        },
+        "geo": { "latitude": 52.5305, "longitude": 13.3833 }
+      },
+      "name": "Packstation 145",
+      "distance": 240,
+      "openingHours": [
+        { "dayOfWeek": "http://schema.org/Monday", "opens": "00:00", "closes": "23:59" },
+        { "dayOfWeek": "http://schema.org/Sunday", "opens": "00:00", "closes": "23:59" }
+      ],
+      "closurePeriods": [],
+      "serviceTypes": [
+        "parcel:pick-up",
+        "parcel:drop-off-unregistered",
+        "parcel:drop-off-account"
+      ],
+      "averageCapacityDayOfWeek": []
+    },
+    {
+      "url": "/location-finder/v1/locations/8003-4901812",
+      "location": {
+        "ids": [
+          { "locationId": "8003-4901812", "provider": "DHL" }
+        ],
+        "keyword": "DHL ServicePoint Mitte",
+        "type": "servicepoint",
+        "address": {
+          "countryCode": "DE",
+          "postalCode": "10117",
+          "addressLocality": "Berlin",
+          "streetAddress": "Friedrichstraße 100"
+        },
+        "geo": { "latitude": 52.5180, "longitude": 13.3886 }
+      },
+      "name": "DHL ServicePoint Mitte",
+      "distance": 870,
+      "openingHours": [
+        { "dayOfWeek": "http://schema.org/Monday", "opens": "08:00", "closes": "20:00" },
+        { "dayOfWeek": "http://schema.org/Saturday", "opens": "09:00", "closes": "16:00" }
+      ],
+      "closurePeriods": [],
+      "serviceTypes": [
+        "parcel:drop-off-account",
+        "parcel:drop-off-unregistered",
+        "parcel:pick-up",
+        "express:drop-off",
+        "express:pick-up"
+      ]
+    },
+    {
+      "url": "/location-finder/v1/locations/8003-4901833",
+      "location": {
+        "ids": [
+          { "locationId": "8003-4901833", "provider": "DHL" }
+        ],
+        "keyword": "Postfiliale 521",
+        "type": "postoffice",
+        "address": {
+          "countryCode": "DE",
+          "postalCode": "10119",
+          "addressLocality": "Berlin",
+          "streetAddress": "Torstraße 99"
+        },
+        "geo": { "latitude": 52.5292, "longitude": 13.4017 }
+      },
+      "name": "Postfiliale 521",
+      "distance": 1420,
+      "openingHours": [
+        { "dayOfWeek": "http://schema.org/Monday", "opens": "08:30", "closes": "18:30" }
+      ],
+      "closurePeriods": [],
+      "serviceTypes": [
+        "parcel:drop-off-account",
+        "parcel:drop-off-unregistered",
+        "parcel:pick-up"
+      ]
+    }
+  ]
+}

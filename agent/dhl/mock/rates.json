@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "productCode": "P",
+      "productName": "EXPRESS WORLDWIDE",
+      "localProductCode": "P",
+      "totalPrice": [
+        {
+          "currencyType": "BILLC",
+          "priceCurrency": "EUR",
+          "price": 184.52
+        }
+      ],
+      "totalPriceBreakdown": [
+        {
+          "name": "Base price",
+          "price": 142.10,
+          "priceCurrency": "EUR"
+        },
+        {
+          "name": "Fuel surcharge",
+          "price": 28.42,
+          "priceCurrency": "EUR"
+        },
+        {
+          "name": "Remote area surcharge",
+          "price": 0.00,
+          "priceCurrency": "EUR"
+        },
+        {
+          "name": "Insurance",
+          "price": 14.00,
+          "priceCurrency": "EUR"
+        }
+      ],
+      "deliveryCapabilities": {
+        "deliveryTypeCode": "QDDC",
+        "estimatedDeliveryDateAndTime": "2026-05-25T17:00:00",
+        "destinationServiceAreaCode": "AUS",
+        "destinationFacilityAreaCode": "AUS",
+        "deliveryAdditionalDays": 0,
+        "deliveryDayOfWeek": 1,
+        "totalTransitDays": 3
+      },
+      "pickupCapabilities": {
+        "nextBusinessDay": false,
+        "localCutoffDateAndTime": "2026-05-21T18:00:00",
+        "gmtCutoffTime": "16:00:00",
+        "pickupEarliest": "08:00:00",
+        "pickupLatest": "18:00:00",
+        "originServiceAreaCode": "BER",
+        "originFacilityAreaCode": "BER",
+        "pickupAdditionalDays": 0,
+        "pickupDayOfWeek": 4
+      }
+    },
+    {
+      "productCode": "U",
+      "productName": "EXPRESS WORLDWIDE EU",
+      "totalPrice": [
+        {
+          "currencyType": "BILLC",
+          "priceCurrency": "EUR",
+          "price": 96.40
+        }
+      ],
+      "totalPriceBreakdown": [
+        {
+          "name": "Base price",
+          "price": 74.20,
+          "priceCurrency": "EUR"
+        },
+        {
+          "name": "Fuel surcharge",
+          "price": 14.20,
+          "priceCurrency": "EUR"
+        },
+        {
+          "name": "Insurance",
+          "price": 8.00,
+          "priceCurrency": "EUR"
+        }
+      ],
+      "deliveryCapabilities": {
+        "deliveryTypeCode": "QDDC",
+        "estimatedDeliveryDateAndTime": "2026-05-27T17:00:00",
+        "totalTransitDays": 5
+      }
+    },
+    {
+      "productCode": "N",
+      "productName": "ECONOMY SELECT",
+      "totalPrice": [
+        {
+          "currencyType": "BILLC",
+          "priceCurrency": "EUR",
+          "price": 64.80
+        }
+      ],
+      "totalPriceBreakdown": [
+        {
+          "name": "Base price",
+          "price": 52.00,
+          "priceCurrency": "EUR"
+        },
+        {
+          "name": "Fuel surcharge",
+          "price": 8.80,
+          "priceCurrency": "EUR"
+        },
+        {
+          "name": "Insurance",
+          "price": 4.00,
+          "priceCurrency": "EUR"
+        }
+      ],
+      "deliveryCapabilities": {
+        "deliveryTypeCode": "QDDC",
+        "estimatedDeliveryDateAndTime": "2026-05-30T17:00:00",
+        "totalTransitDays": 8
+      }
+    }
+  ]
+}

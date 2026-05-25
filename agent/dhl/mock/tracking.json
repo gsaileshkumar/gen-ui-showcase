@@ -1,0 +1,99 @@
+{
+  "shipments": [
+    {
+      "id": "00340434161094023988",
+      "service": "express",
+      "origin": {
+        "address": {
+          "addressLocality": "Berlin",
+          "countryCode": "DE",
+          "postalCode": "10115"
+        }
+      },
+      "destination": {
+        "address": {
+          "addressLocality": "Austin, TX",
+          "countryCode": "US",
+          "postalCode": "78701"
+        }
+      },
+      "status": {
+        "timestamp": "2026-05-22T08:14:00Z",
+        "location": {
+          "address": {
+            "addressLocality": "Leipzig",
+            "countryCode": "DE"
+          }
+        },
+        "statusCode": "transit",
+        "status": "In transit",
+        "description": "Shipment processed at DHL Hub Leipzig"
+      },
+      "estimatedTimeOfDelivery": "2026-05-25T17:00:00Z",
+      "estimatedDeliveryTimeFrame": {
+        "estimatedFrom": "2026-05-25T09:00:00Z",
+        "estimatedThrough": "2026-05-25T17:00:00Z"
+      },
+      "details": {
+        "product": {
+          "productName": "EXPRESS WORLDWIDE"
+        },
+        "totalNumberOfPieces": 1,
+        "weight": {
+          "value": 2.4,
+          "unitText": "kg"
+        }
+      },
+      "events": [
+        {
+          "timestamp": "2026-05-21T16:02:00Z",
+          "location": {
+            "address": {
+              "addressLocality": "Berlin",
+              "countryCode": "DE"
+            }
+          },
+          "statusCode": "pre-transit",
+          "status": "Shipment information received",
+          "description": "Electronic shipment manifest received by DHL"
+        },
+        {
+          "timestamp": "2026-05-21T19:48:00Z",
+          "location": {
+            "address": {
+              "addressLocality": "Berlin",
+              "countryCode": "DE"
+            }
+          },
+          "statusCode": "pickup",
+          "status": "Picked up",
+          "description": "Shipment picked up by DHL Express courier"
+        },
+        {
+          "timestamp": "2026-05-22T03:11:00Z",
+          "location": {
+            "address": {
+              "addressLocality": "Leipzig",
+              "countryCode": "DE"
+            }
+          },
+          "statusCode": "transit",
+          "status": "Processed at hub",
+          "description": "Departed Facility in Leipzig - DHL Hub"
+        },
+        {
+          "timestamp": "2026-05-22T08:14:00Z",
+          "location": {
+            "address": {
+              "addressLocality": "Leipzig",
+              "countryCode": "DE"
+            }
+          },
+          "statusCode": "transit",
+          "status": "In transit",
+          "description": "Loaded onto departing flight DHL004 → CVG"
+        }
+      ]
+    }
+  ]
+}

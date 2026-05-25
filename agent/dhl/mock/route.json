@@ -1,0 +1,52 @@
+{
+  "trackingNumber": "00340434161094023988",
+  "service": "EXPRESS WORLDWIDE",
+  "origin": {
+    "label": "Berlin, DE",
+    "geo": { "latitude": 52.5200, "longitude": 13.4050 },
+    "timestamp": "2026-05-21T19:48:00Z"
+  },
+  "destination": {
+    "label": "Austin, TX, US",
+    "geo": { "latitude": 30.2672, "longitude": -97.7431 },
+    "timestamp": "2026-05-25T17:00:00Z"
+  },
+  "waypoints": [
+    {
+      "label": "Berlin Pickup",
+      "geo": { "latitude": 52.5200, "longitude": 13.4050 },
+      "timestamp": "2026-05-21T19:48:00Z",
+      "legType": "pickup"
+    },
+    {
+      "label": "Leipzig Hub",
+      "geo": { "latitude": 51.4232, "longitude": 12.2381 },
+      "timestamp": "2026-05-22T03:11:00Z",
+      "legType": "hub"
+    },
+    {
+      "label": "Flight DHL004",
+      "geo": { "latitude": 50.0379, "longitude": 8.5622 },
+      "timestamp": "2026-05-22T11:20:00Z",
+      "legType": "flight"
+    },
+    {
+      "label": "Cincinnati Hub (CVG)",
+      "geo": { "latitude": 39.0489, "longitude": -84.6678 },
+      "timestamp": "2026-05-23T04:40:00Z",
+      "legType": "hub"
+    },
+    {
+      "label": "Austin Local Sort",
+      "geo": { "latitude": 30.1945, "longitude": -97.6699 },
+      "timestamp": "2026-05-25T08:10:00Z",
+      "legType": "sort"
+    },
+    {
+      "label": "Out for Delivery",
+      "geo": { "latitude": 30.2672, "longitude": -97.7431 },
+      "timestamp": "2026-05-25T13:30:00Z",
+      "legType": "delivery"
+    }
+  ]
+}
