@@ -47,20 +47,26 @@ should slide as you switch tabs.
 
 1. **Health check** — `curl http://localhost:8123/healthz` returns
    `{"status":"ok","dhl_mode":"mock"}`.
-2. **Agent endpoint exists** — `curl -i http://localhost:8123/copilotkit` returns
-   a 405 (method not allowed) or a JSON response — anything other than a
-   connection-refused proves the CopilotKit AG-UI endpoint is up.
-3. **Web app loads** — `http://localhost:3000` shows the yellow DHL hero band,
+2. **Agent endpoint exists** — `curl http://localhost:8123/agent/parcel_pilot/health`
+   returns `{"status":"ok","agent":{"name":"parcel_pilot"}}` — proves the AG-UI
+   endpoint is up.
+3. **Runtime sees the agent** — with both servers up,
+   `curl -s -X POST http://localhost:3000/api/copilotkit -H "Content-Type: application/json" -d '{"method":"info","params":{},"body":{}}'`
+   returns JSON whose `agents` map contains `parcel_pilot`. (This is what the
+   browser client checks during runtime sync — if it's missing you get
+   "agent parcel_pilot not found / No agents registered".)
+4. **Web app loads** — `http://localhost:3000` shows the yellow DHL hero band,
    the four tabs (Controlled / Declarative / MCP Apps / Open-Ended), and the
    SpectrumBar slides between positions as you click them.
-4. **Footer disclaimer is present** on every tab.
-5. **No keys in repo** — `git grep` for `sk-` and your real DHL key turns up
+5. **Footer disclaimer is present** on every tab.
+6. **No keys in repo** — `git grep` for `sk-` and your real DHL key turns up
    nothing. Only `.env.example` is committed.
 
 The end-to-end chat round-trip is **not** wired yet — that's step 3 of the
-build plan (Controlled band vertical slice). You'll see the Copilot runtime
-configured (`web/app/api/copilotkit/route.ts` → `:8123/copilotkit`) but no
-chat UI is mounted on any tab yet.
+build plan (Controlled band vertical slice). The runtime is wired
+(`web/app/api/copilotkit/route.ts` registers the agent at
+`:8123/agent/parcel_pilot` via the `agents` config) but no chat UI is mounted
+on any tab yet.
 
 ## Tech stack
 
@@ -79,7 +85,7 @@ chat UI is mounted on any tab yet.
 ├── package.json          # root scripts (concurrently runs web + agent)
 ├── .env.example
 ├── agent/                # Python LangGraph agent (FastAPI on :8123)
-│   ├── main.py           # FastAPI app + AG-UI endpoint at /copilotkit
+│   ├── main.py           # FastAPI app + AG-UI endpoint at /agent/parcel_pilot
 │   ├── graph.py          # GPT-4o + ToolNode agentic loop
 │   ├── tools.py          # 5 DHL tools
 │   ├── dhl/
@@ -91,7 +97,7 @@ chat UI is mounted on any tab yet.
 │   ├── app/
 │   │   ├── layout.tsx              # CopilotProvider + Footer
 │   │   ├── page.tsx                # TabShell
-│   │   └── api/copilotkit/route.ts # CopilotRuntime → agent at :8123
+│   │   └── api/copilotkit/route.ts # CopilotRuntime → agent via `agents` config
 │   └── components/
 │       ├── bands.ts                # band metadata (single source)
 │       ├── TabShell.tsx

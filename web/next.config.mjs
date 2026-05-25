@@ -13,7 +13,8 @@ const nextConfig = {
   },
   env: {
     NEXT_PUBLIC_AGENT_URL:
-      process.env.NEXT_PUBLIC_AGENT_URL ?? "http://localhost:8123/copilotkit",
+      process.env.NEXT_PUBLIC_AGENT_URL ??
+      "http://localhost:8123/agent/parcel_pilot",
   },
 };
 
