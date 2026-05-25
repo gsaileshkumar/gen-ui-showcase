@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from langchain_core.messages import SystemMessage
 from langchain_openai import ChatOpenAI
+from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph import END, MessagesState, StateGraph
 from langgraph.prebuilt import ToolNode
 
@@ -52,4 +53,7 @@ def build_graph():
     graph.add_conditional_edges("agent", should_continue, {"tools": "tools", END: END})
     graph.add_edge("tools", "agent")
 
-    return graph.compile()
+    # AG-UI persists per-thread state, so the graph needs a checkpointer.
+    # In-memory is fine for a single-process demo; swap for a durable saver
+    # if the agent is ever horizontally scaled.
+    return graph.compile(checkpointer=InMemorySaver())
